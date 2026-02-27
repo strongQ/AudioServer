@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<PackageId>XT.Audio.Core</PackageId>
+	<Version>1.0.4</Version>
+	<Authors>gyg</Authors>
+	<Company>xx</Company>
+	<Description>音频核心库</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="portaudio.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="C:\Users\zhang\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libgcc_s_seh-1.dll" />
+    <Content Include="C:\Users\zhang\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libstdc++-6.dll" />
+    <Content Include="C:\Users\zhang\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libvosk.dll" />
+    <Content Include="C:\Users\zhang\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libwinpthread-1.dll" />
+    <Content Include="portaudio.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="log4net" Version="3.1.0" />
+    <PackageReference Include="XT.Common" Version="1.2.1" />
+    <PackageReference Include="XT.MNet" Version="1.0.8" />
+	  <PackageReference Include="Vosk" Version="0.3.38" />
+	  <PackageReference Include="NAudio" Version="2.2.1" />
+	  <PackageReference Include="PortAudioSharp" Version="0.3.0" />
+
+	  <PackageReference Include="org.k2fsa.sherpa.onnx" Version="1.12.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dll\portaudio.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\zhang\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libwinpthread-1.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\zhang\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libvosk.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\zhang\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libstdc++-6.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\zhang\.nuget\packages\vosk\0.3.38\build\lib\win-x64\libgcc_s_seh-1.dll" />
+  </ItemGroup>
+
+</Project>

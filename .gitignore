@@ -1,0 +1,70 @@
+# .NET / Visual Studio
+# 忽略所有 bin 和 obj 文件夹，这些是编译产物和中间文件
+**/[Bb]in/
+**/[Oo]bj/
+
+# 忽略 Visual Studio 的用户特定设置
+.vs/
+*.suo
+*.user
+
+# 忽略 NuGet 包文件夹
+**/[Pp]ackages/
+# 忽略全局 NuGet 包缓存 (如果位于项目目录内)
+.nuget/
+
+# 忽略 Resharper 和 Rider 的缓存/设置
+_ReSharper.*/
+*.sln.DotSettings.user
+
+# 项目特定的忽略项
+# ---------------------------------
+
+# 忽略运行时生成的临时音频文件
+output.wav
+*.wav
+
+# 忽略下载的大型模型文件和二进制工具
+# 这些文件应该由开发者在本地自行准备，而不是纳入版本控制
+# 在 README.md 中说明如何下载和放置它们
+vosk-model/
+piper/
+
+# 忽略日志文件
+*.log
+
+# 忽略发布文件夹
+**/publish/
+**/Publish/
+
+# 忽略 AOT 生成的特定文件 (通常已包含在 bin/ 和 obj/ 中，但明确列出更安全)
+*.rd.xml
+ilc.*
+*.ilc.pdb
+
+# 操作系统生成的文件
+# ---------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+/AudioServer/obj/Debug/net8.0/ref/AudioServer.dll
+/AudioServer/obj/Debug/net8.0/refint/AudioServer.dll
+/AudioServer/obj/Debug/net8.0/apphost.exe
+/AudioServer/obj/Debug/net8.0/AudioServer.AssemblyInfo.cs
+/AudioServer/obj/Debug/net8.0/AudioServer.AssemblyInfoInputs.cache
+/AudioServer/obj/Debug/net8.0/AudioServer.dll
+/AudioServer/obj/Debug/net8.0/AudioServer.pdb
+/AudioServer/obj/Release/net8.0/AudioServer.AssemblyInfo.cs
+/AudioServer/obj/Release/net8.0/AudioServer.AssemblyInfoInputs.cache
+/AudioServer/obj/Release/net8.0/AudioServer.assets.cache
+/AudioServer/obj/Release/net8.0/AudioServer.GeneratedMSBuildEditorConfig.editorconfig
